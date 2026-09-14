@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kultiq.com – Data-Driven Team Architecture & Culture Analytics</title>
+    <link>https://kultiq.com/</link>
+    <description>Analytische Plattform zur objektiven Erfassung von Team-Kultur, Werte-Kongruenz und Fluktuations-Prävention.</description>
+    <language>de-DE</language>
+    <lastBuildDate>Mon, 14 Sep 2026 10:25:27 GMT</lastBuildDate>
+    <atom:link href="https://kultiq.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Kultur-Simulator & Team Gap Explorer</title>
+      <link>https://kultiq.com/#simulator</link>
+      <description>Interaktive Werteanalyse für High-Performance Teams.</description>
+      <pubDate>Mon, 14 Sep 2026 10:25:27 GMT</pubDate>
+      <guid>https://kultiq.com/#simulator</guid>
+    </item>
+    <item>
+      <title>Fehlbesetzungs-ROI-Rechner</title>
+      <link>https://kultiq.com/#roi</link>
+      <description>Wirtschaftlichkeitsanalyse zur Senkung von Fluktuationskosten.</description>
+      <pubDate>Mon, 14 Sep 2026 10:25:27 GMT</pubDate>
+      <guid>https://kultiq.com/#roi</guid>
+    </item>
+  </channel>
+</rss>

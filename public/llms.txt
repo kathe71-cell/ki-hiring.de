@@ -1,0 +1,15 @@
+# kultiq.com – Team-Kultur-Analyse & Organisationsarchitektur
+
+> Datenbasierte Plattform zur Messung organisatorischer Werteausrichtung, Team-Fit-Simulation und Fluktuationssenkung.
+
+## Methodischer Ansatz & Wissenschaftliche Grundlagen
+- **Organisational Culture Assessment Instrument (OCAI):** Cameron & Quinn Modell (Clan, Adhocracy, Market, Hierarchy).
+- **Cultural Fit Matrix:** Mathematische Kongruenzanalyse zwischen Kandidatenprofilen und Team-Dynamiken.
+- **ROI-Berechnung:** Quantifizierung vermiedener Fehlbesetzungskosten (durchschnittlich 1,5-faches Jahresgehalt nach SHRM).
+
+## Interaktive Features
+- **Interaktiver Kultur-Simulator:** Modellierung von Werteverschiebungen bei Team-Erweiterungen.
+- **ROI-Kalkulator:** Berechnung der Kosteneinsparung durch datenbasierte Selektion.
+
+## Compliance & Privacy
+- Zero-CDN, serverlose Auswertung, DSGVO-konform. Betreiberdetails unter /impressum.
