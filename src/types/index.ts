@@ -29,7 +29,7 @@ export interface CandidateArchetype {
   tagline: string;
   primaryStrength: string;
   blindspotCounterweight: string;
-  teamCompatibilityScore: number;
-  cultureAddDelta: string;
+  focusArea: string;
+  potentialImpulse: string;
   radarDescription: string;
 }

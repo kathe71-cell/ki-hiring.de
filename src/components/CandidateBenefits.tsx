@@ -10,33 +10,33 @@ export const CandidateBenefits: React.FC<CandidateBenefitsProps> = ({ onStartSim
     {
       icon: <Zap className="w-5 h-5 text-amber-600" />,
       code: "01",
-      title: "Firmen bewerben sich bei dir",
-      desc: "Keine zeitraubenden Anschreiben, kein Lebenslauf-Upload. Du machst den 90-Sekunden-Test und interessierte Teams machen dir konkrete Angebote.",
-      tag: "Kein Stress",
+      title: "Praktische Selbstreflexion",
+      desc: "Durchdenke 3 typische Alltagssituationen und reflektiere deine bevorzugten Entscheidungswege im Berufsalltag.",
+      tag: "Live-Demo",
       tagColor: "bg-amber-100 text-amber-950 border-amber-300"
     },
     {
       icon: <TrendingUp className="w-5 h-5 text-emerald-600" />,
       code: "02",
-      title: "Dein Eignungs- & Stärkenprofil zum Mitnehmen",
-      desc: "Kein Anschreiben, kein Lebenslauf-Polieren. Du erhältst ein objektives Stärkenprofil, das genau zeigt, wie du Herausforderungen meisterst. Als fundiertes Argument in Gehaltsverhandlungen.",
-      tag: "Gehalts-Plus",
+      title: "Gesprächsimpuls zum Mitnehmen",
+      desc: "Nutze die übersichtliche PDF-Auswertung als konkreten Aufhänger in Vorstellungsgesprächen und Gehaltsverhandlungen.",
+      tag: "PDF-Export",
       tagColor: "bg-emerald-100 text-emerald-950 border-emerald-300"
     },
     {
       icon: <Shield className="w-5 h-5 text-blue-600" />,
       code: "03",
-      title: "Schutz vor bösen Überraschungen",
-      desc: "Jede Firma verspricht 'flache Hierarchien und tolles Team'. Bei uns siehst du vorher, wie die Kollegen wirklich arbeiten – bevor du kündigst.",
-      tag: "Echte Kultur",
+      title: "Arbeitsweisen vergleichen",
+      desc: "Erfahre, welche Tendenzen dir im Team wichtig sind – bevor du dich für eine neue Stelle entscheidest.",
+      tag: "Orientierung",
       tagColor: "bg-blue-100 text-blue-950 border-blue-300"
     },
     {
       icon: <EyeOff className="w-5 h-5 text-purple-600" />,
       code: "04",
-      title: "100 % Anonym & Sicher",
-      desc: "Kein Foto, kein Alter, kein Name für Außenstehende. Dein aktueller Arbeitgeber erfährt nichts. Erst wenn dir ein Angebot gefällt, gibst du deine Daten frei.",
-      tag: "Voller Schutz",
+      title: "Direktes Matching & Angebote [Geplant]",
+      desc: "Künftig geplantes Feature: Anonymes Talentprofil mit gezielten Anfragen von Firmen, die genau dein Profil suchen.",
+      tag: "In Entwicklung",
       tagColor: "bg-purple-100 text-purple-950 border-purple-300"
     }
   ];
@@ -52,20 +52,20 @@ export const CandidateBenefits: React.FC<CandidateBenefitsProps> = ({ onStartSim
               <span>Für Bewerber & Berufstätige</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950">
-              Schluss mit dem Bewerbungs-Marathon.
+              Arbeitspräferenzen reflektieren & gezielt vorbereiten.
             </h2>
             <p className="text-base text-slate-600 leading-relaxed">
-              Normale Bewerbungen kosten Nerven und Zeit. Bei KI-Hiring drehen wir den Spieß um: 
-              In 90 Sekunden zeigst du spielerisch, wie du Probleme löst, und Teams melden sich direkt mit passenden Angeboten bei dir.
+              Standard-Lebensläufe verraten wenig über den echten Berufsalltag. Mit unserer Praxisszenarien-Demo entdeckst du deine Handlungspräferenzen und nimmst dein Ergebnis direkt mit ins Gespräch.
             </p>
           </div>
 
           <div className="shrink-0">
             <button
+              type="button"
               onClick={onStartSimulation}
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-black bg-amber-450 hover:bg-amber-400 text-slate-950 transition-all cursor-pointer shadow-md hover:shadow-lg border border-amber-500 active:scale-95"
             >
-              <span>Profil jetzt erstellen (90 Sek.)</span>
+              <span>Praxistest jetzt ausprobieren</span>
               <ArrowRight className="w-4 h-4 text-slate-950" />
             </button>
           </div>
@@ -88,7 +88,7 @@ export const CandidateBenefits: React.FC<CandidateBenefitsProps> = ({ onStartSim
                 <p className="text-xs text-slate-600 leading-relaxed">{p.desc}</p>
               </div>
               <div className="pt-3 border-t border-slate-100 text-[11px] font-semibold text-emerald-700 flex items-center gap-1">
-                <span>✓</span> 100 % kostenlos für Talente
+                <span>✓</span> 100 % kostenlose Demo
               </div>
             </div>
           ))}
@@ -98,36 +98,36 @@ export const CandidateBenefits: React.FC<CandidateBenefitsProps> = ({ onStartSim
         <div className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
           <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-6 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-            <span>So einfach funktioniert es für dich:</span>
+            <span>Ablauf der Demo:</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
             <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-100">
               <div className="font-black text-slate-950 flex items-center gap-2 text-sm">
                 <span className="w-6 h-6 rounded-full bg-slate-950 text-white text-xs flex items-center justify-center font-bold">1</span>
-                <span>3 Alltagssituationen lösen</span>
+                <span>3 Alltagssituationen durchspielen</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                Klicke dich durch 3 kurze Praxisfälle. Es gibt kein falsches Ergebnis, sondern zeigt deinen persönlichen Stil.
+                Wähle in 3 berufsbezogenen Dilemma-Szenarien deine präferierte Vorgehensweise aus.
               </p>
             </div>
 
             <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-100">
               <div className="font-black text-slate-950 flex items-center gap-2 text-sm">
                 <span className="w-6 h-6 rounded-full bg-amber-450 text-slate-950 text-xs flex items-center justify-center font-bold">2</span>
-                <span>Dein Stärken-Profil erhalten</span>
+                <span>Demo-Profil & Vektoren ansehen</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                Du siehst sofort, was für ein Arbeits-Typ du bist und welche Teams dich mit Kusshand nehmen würden.
+                Sieh dir deine Tendenz auf den 6 Vektoren an und verstehe die Herleitung deiner Punktergebnisse.
               </p>
             </div>
 
             <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-100">
               <div className="font-black text-slate-950 flex items-center gap-2 text-sm">
                 <span className="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center font-bold">3</span>
-                <span>Passende Angebote erhalten</span>
+                <span>Als PDF für Gespräche nutzen</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                Firmen, die genau deine Stärken suchen, schreiben dir direkt. Du entscheidest ganz entspannt.
+                Drucke dein Ergebnis aus oder speichere es als PDF zur Vorbereitung auf Vorstellungsgespräche.
               </p>
             </div>
           </div>

@@ -48,14 +48,13 @@ export const ScienceMethodology: React.FC = () => {
         {/* Header */}
         <div className="max-w-2xl mb-12 space-y-2">
           <div className="text-xs font-mono uppercase tracking-wider text-zinc-500">
-            [ Wissenschaftlich geprüft • Fair für alle ]
+            [ Methodik & Auswertungslogik ]
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950">
-            Die 6 Bereiche: Wie Menschen im Arbeitsalltag wirklich handeln
+            Die 6 Arbeitsweisen: Regelbasierte Auswertung & Selbstreflexion
           </h2>
           <p className="text-sm text-zinc-600 leading-relaxed">
-            Statt langweiliger Theorie-Fragebögen messen wir, wie jemand bei echten beruflichen Herausforderungen entscheidet – 
-            fair, nachvollziehbar und ohne Hokuspokus.
+            Die Demo ordnet deine gewählten Optionen in 3 berufsbezogenen Praxisszenarien transparent 6 typischen Dimensionen des Berufsalltags zu.
           </p>
         </div>
 
@@ -65,7 +64,7 @@ export const ScienceMethodology: React.FC = () => {
             <div key={dim.code} className="p-5 rounded-lg border border-zinc-200 bg-[#fbfbfb] space-y-2.5">
               <div className="flex justify-between items-center text-xs font-mono">
                 <span className="font-bold text-zinc-950">{dim.code}</span>
-                <span className="text-[10px] text-zinc-500 uppercase">Verständlich</span>
+                <span className="text-[10px] text-zinc-500 uppercase">Dimension</span>
               </div>
               <h3 className="font-bold text-zinc-950 text-sm">{dim.name}</h3>
               <p className="text-xs text-zinc-600 leading-relaxed">{dim.desc}</p>
@@ -76,30 +75,30 @@ export const ScienceMethodology: React.FC = () => {
           ))}
         </div>
 
-        {/* Compliance Details */}
+        {/* Transparent Methodology & Infrastructure Details */}
         <div className="p-6 sm:p-8 rounded-xl border border-zinc-200 bg-zinc-50 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-zinc-700 font-bold uppercase">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span>100 % Fair, transparent & rechtssicher</span>
+            <span>Transparente Auswertung & Grenzen der Demo</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
             <div className="space-y-1.5">
-              <span className="font-bold text-zinc-950 block">Keine undurchsichtige Blackbox</span>
+              <span className="font-bold text-zinc-950 block">Regelbasierte Punktvergabe</span>
               <p className="text-zinc-600 leading-relaxed">
-                Jedes Ergebnis ist logisch erklärt. Keine geheimen Algorithmen, keine Beurteilung nach Aussehen, Alter oder Herkunft.
+                Die Auswertung berechnet relative Punkte (0–100) über feste Delta-Werte je Option A–E. Es kommen keine proprietären KI-Blackbox-Algorithmen zum Einsatz.
               </p>
             </div>
             <div className="space-y-1.5">
-              <span className="font-bold text-zinc-950 block">Server in Deutschland (DSGVO)</span>
+              <span className="font-bold text-zinc-950 block">Hypothetische Wahl vs. Verhalten</span>
               <p className="text-zinc-600 leading-relaxed">
-                Alle Daten liegen sicher verschlüsselt in ISO-27001-zertifizierten Rechenzentren in Frankfurt am Main.
+                Die Entscheidungen spiegeln bevorzugte Handlungsansätze in hypothetischen Szenarien wider, nicht das tatsächlich beobachtete Verhalten am Arbeitsplatz.
               </p>
             </div>
             <div className="space-y-1.5">
-              <span className="font-bold text-zinc-950 block">Sicher für Betriebsrat & Team</span>
+              <span className="font-bold text-zinc-950 block">Technische Ausführung & Hosting</span>
               <p className="text-zinc-600 leading-relaxed">
-                Erfüllt alle europäischen Standards für faire Einstellungsverfahren und schützt verlässlich vor unbewusster Diskriminierung.
+                Die Test-Logik läuft direkt im Browser ab. Die Bereitstellung der Webseite erfolgt über Vercel Inc. ohne Erfassung von Personenprofilen.
               </p>
             </div>
           </div>

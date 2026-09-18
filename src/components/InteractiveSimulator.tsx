@@ -114,15 +114,15 @@ export const InteractiveSimulator: React.FC = () => {
               <span>Interaktiver Praxis-Check</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950">
-              Der 90-Sekunden Test: Wie handelst du im echten Berufsalltag?
+              Interaktiver Praxis-Check: 3 kurze Praxisszenarien
             </h2>
             <p className="text-base text-slate-600 mt-1 max-w-xl">
-              Wähle dein Berufsfeld und entscheide dich in 3 realistischen Praxissituationen. Jede Wahl zeigt ein authentisches Stärkenprofil.
+              Wähle dein Berufsfeld und entscheide dich in 3 realistischen Praxissituationen für deine bevorzugte Vorgehensweise.
             </p>
           </div>
           <div className="text-xs font-semibold text-slate-600 flex items-center gap-2 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Live-Test aktiv • 4 Fachbereiche</span>
+            <span>Kostenlose Demo • 4 Fachbereiche</span>
           </div>
         </div>
 
@@ -185,7 +185,7 @@ export const InteractiveSimulator: React.FC = () => {
           <div className="px-6 py-4 border-b border-slate-200 bg-white flex items-center justify-between text-xs no-print">
             <div className="flex items-center gap-3 text-slate-900 font-bold">
               <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-              <span>Eignungs- & Potenzial-Check</span>
+              <span>Explorativer Praxistest</span>
               <span className="text-slate-300 font-normal">|</span>
               <span className="text-slate-600 font-semibold bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200 text-[11px]">
                 {currentTrack.name}
@@ -233,7 +233,7 @@ export const InteractiveSimulator: React.FC = () => {
                     <span>Wie entscheidest du in diesem Moment?</span>
                   </div>
                   <span className="text-[11px] font-semibold text-slate-500">
-                    5 differenzierte Handlungsoptionen (A – E)
+                    5 Handlungsoptionen (A – E)
                   </span>
                 </div>
 
@@ -273,13 +273,13 @@ export const InteractiveSimulator: React.FC = () => {
                 <div>
                   <div className="text-xs font-black text-emerald-700 uppercase tracking-wider flex items-center gap-1.5 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 inline-flex">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>Offizieller KI-Hiring.de Eignungs-Report</span>
+                    <span>Exploratives Ergebnis deiner ausgewählten Antworten</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-black text-slate-950 mt-2">
-                    Dein Eignungs- & Stärkenprofil
+                    Dein Auswertungs-Profil (Demo)
                   </h3>
                   <p className="text-xs text-slate-500 mt-1">
-                    Erstellt am {new Date().toLocaleDateString('de-DE')} • Validiertes 6-Vektoren-Ergebnis im Bereich: <strong className="text-slate-700">{currentTrack.name}</strong>
+                    Erstellt am {new Date().toLocaleDateString('de-DE')} • Auswertungsübersicht im Bereich: <strong className="text-slate-700">{currentTrack.name}</strong>
                   </p>
                 </div>
 
@@ -302,6 +302,16 @@ export const InteractiveSimulator: React.FC = () => {
                 </div>
               </div>
 
+              {/* Mandatory Disclaimer Box */}
+              <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-950 text-xs leading-relaxed space-y-1">
+                <span className="font-bold block uppercase tracking-wider text-[10px] text-amber-900">
+                  Wichtiger Transparenzhinweis:
+                </span>
+                <p className="font-medium">
+                  Diese Demo ist kein validierter Eignungstest und darf nicht als alleinige Grundlage für Einstellungsentscheidungen verwendet werden.
+                </p>
+              </div>
+
               {/* Grid: Archetype on Left, Radar Chart on Right */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
                 
@@ -313,7 +323,7 @@ export const InteractiveSimulator: React.FC = () => {
                         {archetype.badge}
                       </span>
                       <span className="text-xs font-medium text-slate-300">
-                        Team-Ergänzungs-Quote: <strong className="text-emerald-400 font-black">{archetype.teamCompatibilityScore}%</strong>
+                        Schwerpunkt: <strong className="text-emerald-400 font-bold">{archetype.focusArea}</strong>
                       </span>
                     </div>
 
@@ -329,13 +339,13 @@ export const InteractiveSimulator: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-xs">
                       <div className="space-y-1 bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
                         <span className="text-slate-400 uppercase font-bold text-[10px]">
-                          Deine größte Stärke
+                          Bevorzugte Handlungsweise
                         </span>
                         <p className="text-slate-200 leading-relaxed font-medium">{archetype.primaryStrength}</p>
                       </div>
                       <div className="space-y-1 bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
                         <span className="text-slate-400 uppercase font-bold text-[10px]">
-                          Mehrwert fürs Team
+                          Möglicher Impuls fürs Team
                         </span>
                         <p className="text-slate-200 leading-relaxed font-medium">{archetype.blindspotCounterweight}</p>
                       </div>
@@ -343,28 +353,33 @@ export const InteractiveSimulator: React.FC = () => {
                   </div>
 
                   <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                    <span>Ergänzungs-Effekt (Culture-Add):</span>
-                    <span className="font-bold text-emerald-400">{archetype.cultureAddDelta}</span>
+                    <span>Möglicher Gesprächsimpuls:</span>
+                    <span className="font-bold text-emerald-400">{archetype.potentialImpulse}</span>
                   </div>
                 </div>
 
                 {/* Radar Chart Card */}
                 <div className="lg:col-span-5 bg-slate-50/70 p-6 rounded-2xl border border-slate-200 flex flex-col items-center justify-center">
                   <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-                    Dein 6-Dimensionen Vektor
+                    Visualisierung deiner 6 Arbeitsweisen
                   </div>
                   <RadarChart scores={calculatedVectors} />
                   <div className="text-[11px] text-slate-500 mt-2 text-center">
-                    Verglichen mit dem durchschnittlichen Team-Profil
+                    Basiert auf den 3 ausgewählten Szenarien
                   </div>
                 </div>
 
               </div>
 
-              {/* Vector Details Grid */}
+              {/* Vector Details Grid & Scoring Explanation */}
               <div className="space-y-4 pt-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-950">
-                  Detailwerte deiner 6 Arbeitsweisen
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-950">
+                    Demo-Punktwerte mit nachvollziehbarer Herleitung
+                  </div>
+                  <span className="text-[11px] text-slate-500">
+                    Relativer Score (0 - 100) basierend auf deinen 3 Wahlentscheidungen
+                  </span>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
@@ -374,8 +389,8 @@ export const InteractiveSimulator: React.FC = () => {
                       <div key={metric.key} className="p-4 rounded-xl border border-slate-200 bg-white space-y-2 shadow-2xs">
                         <div className="flex justify-between items-center text-xs">
                           <span className="font-bold text-slate-900">{metric.label}</span>
-                          <span className="font-mono font-black text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                            {score} %
+                          <span className="font-mono font-black text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                            {score} / 100
                           </span>
                         </div>
                         <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
@@ -391,16 +406,23 @@ export const InteractiveSimulator: React.FC = () => {
                     );
                   })}
                 </div>
+
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 text-xs leading-relaxed space-y-1">
+                  <span className="font-bold text-slate-900 block">Auswertungsregel & Grenzen der Demo:</span>
+                  <p>
+                    Die Punktwerte ergeben sich schrittweise aus den relativen Auswertungs-Deltas der Handlungsoptionen A–E deiner 3 gewählten Szenarien. Es werden keine echten Teamdaten erhoben und keine psychometrischen Eignungsdiagnosen gestellt.
+                  </p>
+                </div>
               </div>
 
               {/* Instant Next Steps */}
               <div className="p-6 rounded-2xl bg-amber-50/60 border border-amber-200 text-slate-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 no-print">
                 <div className="space-y-1">
                   <span className="text-xs font-black uppercase tracking-wider text-amber-900">
-                    Was passiert jetzt?
+                    Nächster Schritt mit deinem Ergebnis:
                   </span>
                   <p className="text-xs text-slate-700 leading-relaxed max-w-xl">
-                    Speichere dir dein Ergebnis als PDF. Du kannst es direkt bei Gehaltsgesprächen oder Bewerbungen beilegen – oder Teams finden dich gezielt anhand deiner Stärken.
+                    Speichere dir dein Ergebnis als PDF oder erstelle einen Ausdruck für deine Unterlagen. Nutze die Übersicht als gezielten Gesprächsimpuls im Vorstellungsgespräch, um bevorzugte Vorgehensweisen konkret zu besprechen.
                   </p>
                 </div>
                 <button

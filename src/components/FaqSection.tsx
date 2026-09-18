@@ -9,27 +9,27 @@ interface FaqItem {
 const FAQS: FaqItem[] = [
   {
     question: "Wie unterscheidet sich KI-Hiring von normalen Vorstellungsgesprächen?",
-    answer: "Im Vorstellungsgespräch erzählt jeder Bewerber das, was die Chefs hören wollen. Man kann sich leicht verstellen. Bei KI-Hiring versetzen wir Menschen in 3 typische Alltagssituationen (z. B. Termindruck kurz vor Feierabend, Meinungsverschiedenheiten im Team). So sieht man sofort, wie jemand tatsächlich anpackt, kommuniziert und Probleme löst – ganz ohne langes Bauchgefühl-Raten."
+    answer: "Im Vorstellungsgespräch stehen oft auswendig gelernte Antworten im Vordergrund. KI-Hiring versetzt Menschen in 3 typische Alltagssituationen (z. B. Priorisierung unter Zeitdruck, Abstimmung im Team). So entsteht eine verlässliche Grundlage, um bevorzugte Arbeitsweisen sachlich im Kennenlerngespräch zu besprechen."
   },
   {
     question: "Können Bewerber bei dem Test schummeln oder die 'beste' Antwort googeln?",
-    answer: "Nein, denn es gibt kein 'Richtig' oder 'Falsch'. Jede Option ist eine vollkommen seriöse und erfolgreiche Art zu handeln (z. B. sofort pragmatisch loslegen vs. erst alle Fakten genau analysieren). Weil keine Antwort 'besser' ist, sondern nur einen anderen Arbeitsstil beschreibt, gibt es nichts zu schummeln. Das Ergebnis zeigt einfach die reale Arbeitsweise."
+    answer: "Nein, denn in den Szenarien gibt es kein pauschales 'Richtig' oder 'Falsch'. Alle Handlungsoptionen stellen praxisnahe, valide Arbeitsweisen dar (z. B. pragmatisches Ausprobieren vs. gründliches Absichern). Es geht nicht um Bestehen oder Durchfallen, sondern um Transparenz über bevorzugte Vorgehensweisen."
   },
   {
     question: "Wie viel Zeit müssen Bewerber und Chefs investieren?",
-    answer: "Für Bewerber dauert der Test auf dem Smartphone gerade einmal 90 bis 180 Sekunden. Niemand muss lange Texte schreiben oder einen Lebenslauf formatieren. Teamleiter und Chefs bekommen sofort eine übersichtliche 1-Seiten-Zusammenfassung mit passenden Fragen fürs Kennenlerngespräch."
+    answer: "Der Praxistest umfasst 3 kurze Szenarien und dauert gerade einmal ca. 90 bis 180 Sekunden. Nach Abschluss steht sofort ein strukturierter Ergebnisbericht bereit, der als Gesprächsaufhänger genutzt werden kann."
   },
   {
-    question: "Was sagen Betriebsrat und Datenschutz dazu?",
-    answer: "Das Verfahren ist absolut sicher, objektiv und fair. Wir bewerten niemanden nach Aussehen, Alter, Geschlecht oder Herkunft. Jedes Testergebnis beruht rein auf sachlichen Handlungsmustern und ist 100 % nachvollziehbar. Alle Daten liegen auf deutschen Servern in Frankfurt am Main und werden niemals an Dritte weitergegeben."
+    question: "Wie ist der Ablauf bzgl. Datenschutz und Systeminfrastruktur?",
+    answer: "Die Demo wird clientseitig direkt im Webbrowser ausgeführt und auf Vercel gehostet. Es werden im Rahmen dieser Demo keine personenbezogenen Bewerberdaten verarbeitet oder dauerhaft auf Servern gespeichert. Die Nutzung erfolgt anonym und ohne Registrierung."
   },
   {
     question: "Funktioniert das mit unserer Software (z. B. Personio, Workday, Greenhouse)?",
-    answer: "Ja, problemlos. Ihr könnt den Link zum 90-Sekunden-Test einfach automatisch in eure Eingangsbestätigung an Bewerber einbinden oder unser System direkt per Schnittstelle an eure bestehende HR-Software anbinden."
+    answer: "In der aktuellen Demo könnt ihr das Ergebnis direkt im Browser einsehen und als PDF-Bericht herunterladen. Direkte Schnittstellen (API) und automatische Einbindungen in HR-Systeme sind als zukünftige Erweiterung geplant [Geplant]."
   },
   {
     question: "Was bedeutet eigentlich 'Culture-Add' genau?",
-    answer: "Viele Firmen suchen nach Leuten, die 'genauso sind wie wir'. Das führt dazu, dass Teams aus lauter Klonen bestehen, die alle die gleichen blinden Flecken haben. 'Culture-Add' bedeutet: Wir suchen gezielt die Stärken, die eurem Team heute noch fehlen (z. B. jemand, der mutig den Mund aufmacht, wenn das Team zu zögerlich ist – oder jemand, der Struktur reinbringt, wenn es zu chaotisch zugeht)."
+    answer: "Statt nur nach Menschen zu suchen, die exakt so ticken wie das bestehende Team (Culture Fit), bezeichnet Culture-Add das gezielte Ergänzen fehlender Handlungsperspektiven (z. B. strukturierte Prozessstärke in einem sehr dynamischen Team oder mutige Entscheidungsimpulse in einem zögerlichen Umfeld)."
   }
 ];
 

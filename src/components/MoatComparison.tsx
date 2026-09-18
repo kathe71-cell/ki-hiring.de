@@ -13,10 +13,10 @@ export const MoatComparison: React.FC = () => {
             [ Der Unterschied ]
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950">
-            Klassische Bewerbungen vs. 90-Sekunden Praxistest
+            Klassische Bewerbungen vs. Praxisszenarien-Demo
           </h2>
           <p className="text-sm text-zinc-600 leading-relaxed">
-            Warum Lebensläufe und Standard-Fragen im Vorstellungsgespräch oft täuschen – und wie ihr sofort seht, ob es menschlich und fachlich passt.
+            Warum Lebensläufe im Vorstellungsgespräch oft wenig über den Alltagsstil verraten – und wie Praxisszenarien als Einstieg für sachliche Gespräche dienen.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export const MoatComparison: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 bg-zinc-100 border-b border-zinc-200 p-4 text-xs font-mono text-zinc-600 font-semibold">
             <div className="md:col-span-3 uppercase">Bereich</div>
             <div className="md:col-span-4 uppercase text-zinc-600">Alte Methode (Lebenslauf & Fragebogen)</div>
-            <div className="md:col-span-5 uppercase text-zinc-950 font-bold">KI-Hiring (Praxis-Simulation)</div>
+            <div className="md:col-span-5 uppercase text-zinc-950 font-bold">KI-Hiring (Praxisszenarien-Demo)</div>
           </div>
 
           <div className="divide-y divide-zinc-200">

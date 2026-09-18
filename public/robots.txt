@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ki-hiring.de/sitemap.xml
+Sitemap: https://www.ki-hiring.de/sitemap.xml

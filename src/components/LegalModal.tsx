@@ -63,15 +63,9 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
-              <p className="font-bold text-slate-950">EU-Streitschlichtung & Verbraucherstreitbeilegung:</p>
+              <p className="font-bold text-slate-950">Verbraucherstreitbeilegung:</p>
               <p>
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline ml-1">
-                  https://ec.europa.eu/consumers/odr
-                </a>.
-              </p>
-              <p>
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
             </div>
           </div>
@@ -93,9 +87,9 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
-              <p className="font-bold text-slate-950">3. Clientseitige Simulation & Lokale Verarbeitung:</p>
+              <p className="font-bold text-slate-950">3. Clientseitige Simulation, Hosting & Analytics:</p>
               <p>
-                Die interaktive Praxistest-Simulation wird rein lokal in Ihrem Webbrowser berechnet. Es werden während des Tests keine persönlichen Profile auf Servern gespeichert.
+                Die Website wird über den Anbieter Vercel Inc. gehostet. Zur technischen Reichweitenmessung kommt Vercel Web Analytics in datenschutzfreundlicher, anonymisierter Form zum Einsatz (ohne Cookies oder Tracking individueller Nutzerprofile). Die interaktive Praxistest-Simulation wird rein lokal in Ihrem Webbrowser berechnet.
               </p>
             </div>
 

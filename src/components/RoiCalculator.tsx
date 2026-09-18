@@ -8,7 +8,8 @@ interface RoiCalculatorProps {
 export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation }) => {
   const [hiresPerYear, setHiresPerYear] = useState<number>(12);
   const [avgSalary, setAvgSalary] = useState<number>(68000);
-  const [currentFailureRate, setCurrentFailureRate] = useState<number>(16); // % Bundesdurchschnitt
+  const [currentFailureRate, setCurrentFailureRate] = useState<number>(16);
+  const [reductionRate, setReductionRate] = useState<number>(20); // Hypothetical reduction assumption %
   const [showBreakdown, setShowBreakdown] = useState<boolean>(false);
 
   // Plausible cost breakdown per probation departure:
@@ -26,15 +27,14 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
 
   // Expected bad hires per year currently
   const currentBadHires = (hiresPerYear * (currentFailureRate / 100));
-  const currentTotalLoss = currentBadHires * totalCostPerMisHire;
+  
+  // Hypothetically avoided mis-hires based on selected assumption rate
+  const avoidedMisHiresNum = currentBadHires * (reductionRate / 100);
+  const avoidedMisHires = avoidedMisHiresNum.toFixed(1);
 
-  // With situational assessment, failure rate drops by ~65%
-  const newFailureRate = currentFailureRate * 0.35;
-  const newBadHires = (hiresPerYear * (newFailureRate / 100));
-  const newTotalLoss = newBadHires * totalCostPerMisHire;
-
-  const annualSavings = Math.round(currentTotalLoss - newTotalLoss);
-  const avoidedMisHires = (currentBadHires - newBadHires).toFixed(1);
+  // Hypothetical annual savings
+  const annualSavings = Math.round(avoidedMisHiresNum * totalCostPerMisHire);
+  const newBadHires = (currentBadHires - avoidedMisHiresNum).toFixed(1);
 
   return (
     <section id="kostenmodell" className="py-20 border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
@@ -44,14 +44,14 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
         <div className="max-w-2xl mb-12 space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-950 text-xs font-bold uppercase tracking-wider border border-emerald-300">
             <Calculator className="w-3.5 h-3.5 text-emerald-700" />
-            <span>Kosten-Rechner</span>
+            <span>Neutrale Modellrechnung</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950">
-            Was euch eine Fehlbesetzung in der Probezeit wirklich kostet
+            Was Fehlbesetzungen in der Probezeit kosten können
           </h2>
           <p className="text-base text-slate-600 leading-relaxed">
-            Wenn ein neuer Kollege nach 3 Monaten wieder geht, verbrennt das nicht nur Inseratskosten, 
-            sondern wirft das ganze Team zurück. Rechnet hier euer echtes Einsparpotenzial aus:
+            Wenn ein neuer Kollege nach wenigen Monaten wieder geht, entstehen verdeckte Rekrutierungs- 
+            und Einarbeitungskosten. Nutze dieses Modell zur Berechnung potenzieller Ersparnisse auf Basis deiner Annahmen:
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
               {/* Slider 3: Failure Rate */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-sm font-bold text-slate-900">
-                  <span>Bisherige Abbrecher in der Probezeit:</span>
+                  <span>Kündigungen in Probezeit (Erfahrungswert):</span>
                   <span className="font-mono text-base font-black text-amber-600">{currentFailureRate} %</span>
                 </div>
                 <input
@@ -122,9 +122,31 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
                   className="w-full accent-amber-500 cursor-pointer h-2 bg-slate-200 rounded-lg"
                 />
                 <div className="flex justify-between text-[11px] font-semibold text-slate-500">
-                  <span>5 % (Sehr selten)</span>
-                  <span>16 % (Bundesdurchschnitt)</span>
-                  <span>30 % (Häufige Abbrüche)</span>
+                  <span>5 % (Niedrig)</span>
+                  <span>16 % (Typischer Richtwert)</span>
+                  <span>30 % (Erhöht)</span>
+                </div>
+              </div>
+
+              {/* Slider 4: Assumption Rate */}
+              <div className="space-y-2 pt-2 border-t border-slate-100">
+                <div className="flex justify-between items-center text-sm font-bold text-slate-900">
+                  <span>Angenommene Kündigungs-Reduktion:</span>
+                  <span className="font-mono text-base font-black text-emerald-600">−{reductionRate} %</span>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="40"
+                  step="5"
+                  value={reductionRate}
+                  onChange={(e) => setReductionRate(Number(e.target.value))}
+                  className="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-200 rounded-lg"
+                />
+                <div className="flex justify-between text-[11px] font-semibold text-slate-500">
+                  <span>10 % (Vorsichtig)</span>
+                  <span>20 % (Modellannahme)</span>
+                  <span>40 % (Optimistisch)</span>
                 </div>
               </div>
 
@@ -135,7 +157,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
                   className="text-xs font-bold text-slate-700 hover:text-amber-600 flex items-center gap-1.5 cursor-pointer transition-colors bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200"
                 >
                   <Info className="w-3.5 h-3.5 text-amber-600" />
-                  <span>Wie setzen sich die Kosten zusammen?</span>
+                  <span>Wie berechnen sich die Kosten pro Fehlgriff?</span>
                   {showBreakdown ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                 </button>
 
@@ -154,7 +176,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
                       <span className="font-bold text-slate-950 font-mono">{teamCapacityCost.toLocaleString('de-DE')} €</span>
                     </div>
                     <div className="flex justify-between border-t border-slate-200 pt-1.5 font-bold text-slate-950 text-xs">
-                      <span>Reale Gesamtkosten pro Fehlbesetzung:</span>
+                      <span>Geschätzte Kosten pro Einzel-Fehlbesetzung:</span>
                       <span className="text-amber-700 font-mono text-sm">{totalCostPerMisHire.toLocaleString('de-DE')} €</span>
                     </div>
                   </div>
@@ -168,27 +190,27 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
               
               <div className="space-y-2">
                 <span className="text-xs uppercase font-bold tracking-wider text-amber-400 block">
-                  Eure jährliche Ersparnis durch treffsichere Einstellungen *
+                  Errechnetes Einsparpotenzial (Modellrechnung) *
                 </span>
                 <div className="text-4xl sm:text-5xl font-black font-mono text-white tracking-tight">
                   {annualSavings.toLocaleString('de-DE')} €
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Weil im Schnitt <strong className="text-emerald-400">{avoidedMisHires} teure Fehlgriffe pro Jahr</strong> zuverlässig verhindert werden.
+                  Bei <strong className="text-emerald-400">−{reductionRate}% Kündigungen</strong> könnten rechnerisch <strong className="text-emerald-400">{avoidedMisHires} Fehlgriffe pro Jahr</strong> vermieden werden.
                 </p>
               </div>
 
               <div className="space-y-2.5 border-t border-slate-800 pt-4 text-xs font-mono">
                 <div className="flex justify-between text-slate-400">
-                  <span>Bisherige Kündigungen in Probezeit:</span>
+                  <span>Erwartete Abbrüche bisher:</span>
                   <span className="text-rose-300 font-bold">ca. {currentBadHires.toFixed(1)} Personen</span>
                 </div>
                 <div className="flex justify-between text-slate-400">
-                  <span>Mit Praxistest von KI-Hiring:</span>
-                  <span className="text-emerald-400 font-bold">nur noch ca. {newBadHires.toFixed(1)} Personen</span>
+                  <span>Nach angenommener Reduktion:</span>
+                  <span className="text-emerald-400 font-bold">ca. {newBadHires} Personen</span>
                 </div>
                 <div className="flex justify-between text-slate-400">
-                  <span>Kosten pro einzelnem Fehlgriff:</span>
+                  <span>Berechnete Kosten pro Fehlgriff:</span>
                   <span className="text-amber-300 font-bold">{totalCostPerMisHire.toLocaleString('de-DE')} €</span>
                 </div>
               </div>
@@ -217,7 +239,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onStartSimulation 
           {/* Legal Note */}
           <div className="mt-8 pt-4 border-t border-slate-200 text-center">
             <p className="text-[11px] text-slate-500 leading-normal">
-              * Modellrechnung. Die tatsächliche Höhe hängt vom individuellen Nutzungsverhalten und den Konditionen des Anbieters ab.
+              * Unverbindliche Modellrechnung auf Basis der von dir eingestellten Parameter und typischer Kostenfaktoren (Inserate, Einarbeitungszeit, Vertretungsaufwand).
             </p>
           </div>
 

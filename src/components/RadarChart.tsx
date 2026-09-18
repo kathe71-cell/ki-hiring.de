@@ -9,10 +9,9 @@ interface RadarChartProps {
     feedback_velocity: number;
     innovation_drift: number;
   };
-  showTeamBaseline?: boolean;
 }
 
-export const RadarChart: React.FC<RadarChartProps> = ({ scores, showTeamBaseline = true }) => {
+export const RadarChart: React.FC<RadarChartProps> = ({ scores }) => {
   const size = 300;
   const center = size / 2;
   const radius = center - 45;
@@ -41,18 +40,6 @@ export const RadarChart: React.FC<RadarChartProps> = ({ scores, showTeamBaseline
   });
 
   const candidatePointsString = candidatePoints.map(p => `${p.x},${p.y}`).join(' ');
-
-  // Team reference baseline (average team values)
-  const teamBaseline = [65, 60, 55, 50, 62, 58];
-  const teamPoints = teamBaseline.map((val, i) => {
-    const r = (val / 100) * radius;
-    const angle = angleSlice * i - Math.PI / 2;
-    return {
-      x: center + r * Math.cos(angle),
-      y: center + r * Math.sin(angle)
-    };
-  });
-  const teamPointsString = teamPoints.map(p => `${p.x},${p.y}`).join(' ');
 
   // Grid circles
   const levels = [0.25, 0.5, 0.75, 1.0];
@@ -91,18 +78,6 @@ export const RadarChart: React.FC<RadarChartProps> = ({ scores, showTeamBaseline
             />
           );
         })}
-
-        {/* Team Baseline Polygon (Dashed outline) */}
-        {showTeamBaseline && (
-          <polygon
-            points={teamPointsString}
-            fill="#334155"
-            fillOpacity={0.08}
-            stroke="#64748b"
-            strokeWidth={1.5}
-            strokeDasharray="4 3"
-          />
-        )}
 
         {/* Candidate Polygon (Highlighted Area) */}
         <polygon
@@ -152,7 +127,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({ scores, showTeamBaseline
                 textAnchor="middle"
                 className="text-[9px] font-mono font-bold fill-amber-700 font-sans"
               >
-                {val}%
+                {val} Pkt.
               </text>
             </g>
           );
@@ -163,14 +138,8 @@ export const RadarChart: React.FC<RadarChartProps> = ({ scores, showTeamBaseline
       <div className="flex items-center justify-center gap-5 mt-3 pt-2 border-t border-slate-200/80 text-[11px]">
         <div className="flex items-center gap-1.5">
           <span className="w-3 h-3 rounded-full bg-amber-500 border border-amber-600 inline-block shadow-2xs"></span>
-          <span className="text-slate-900 font-bold">Kandidaten-Stärken</span>
+          <span className="text-slate-900 font-bold">Demo-Punktwerte (0–100)</span>
         </div>
-        {showTeamBaseline && (
-          <div className="flex items-center gap-1.5">
-            <span className="w-3.5 h-1 border-t-2 border-dashed border-slate-500 inline-block"></span>
-            <span className="text-slate-600">Bestehendes Team</span>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -158,31 +158,31 @@ export const ARCHETYPES: Record<string, CandidateArchetype> = {
     title: "Der Strategische Impulsgeber",
     badge: "Agile Catalyst",
     tagline: "Hohe Umsetzungsfrequenz kombiniert mit konstruktiver, lösungsorientierter Direktheit.",
-    primaryStrength: "Löst Stagnation in zögerlichen Prozessen durch schnelle, messbare Pilot-Iterationen auf.",
-    blindspotCounterweight: "Verhindert überlange Diskussionsschleifen in stark konsensorientierten Teams.",
-    teamCompatibilityScore: 94,
-    cultureAddDelta: "+35 % schnellere Entscheidungszyklen",
-    radarDescription: "Besonders wirksam in Organisationen, die an langen Abstimmungswegen leiden."
+    primaryStrength: "Löst Stagnation in zögerlichen Prozessen durch schnelle, pragmatische Pilot-Iterationen auf.",
+    blindspotCounterweight: "Fokussiert das Gespräch auf zügige Entscheidungswege in stark konsensorientierten Teams.",
+    focusArea: "Umsetzung & Entscheidungsfreude",
+    potentialImpulse: "Fokus auf zügige Entscheidungszyklen",
+    radarDescription: "Hilfreicher Impuls für Organisationen, die an langen Abstimmungswegen arbeiten möchten."
   },
   systems: {
     title: "Der Systemische Architekt",
     badge: "Systems Thinker",
     tagline: "Verbindet hohe Eigenständigkeit mit strukturellen Sicherheitsnetzen.",
-    primaryStrength: "Etabliert fehlertolerante Leitplanken, ohne die operative Geschwindigkeit zu drosseln.",
-    blindspotCounterweight: "Schützt wachstumsstarke Teams vor chaotischer Fragmentierung und technischer Schuld.",
-    teamCompatibilityScore: 91,
-    cultureAddDelta: "+40 % operative Prozessstabilität",
-    radarDescription: "Ideal für dynamische Teams in der Skalierungsphase."
+    primaryStrength: "Etabliert verlässliche Leitplanken, ohne die operative Flexibilität zu drosseln.",
+    blindspotCounterweight: "Schützt dynamische Teams vor unübersichtlicher Fragmentierung.",
+    focusArea: "Struktur & Prozessqualität",
+    potentialImpulse: "Verstärkt die operative Prozessstabilität",
+    radarDescription: "Geeignet als Diskussionsansatz für Teams in Wachstums- und Strukturierungsphasen."
   },
   truthTeller: {
     title: "Der Konstruktive Challenger",
     badge: "Radical Candor",
-    tagline: "Steht für inhaltliche Aufrichtigkeit gepaart mit hoher Teamloyalität.",
-    primaryStrength: "Spricht ungelöste Widersprüche offen an, bevor sie zu kostenintensiven Fehlentwicklungen führen.",
-    blindspotCounterweight: "Bricht Konformitäts-Tendenzen auf und stärkt die Diskussionskultur im Team.",
-    teamCompatibilityScore: 89,
-    cultureAddDelta: "+48 % frühere Fehlererkennung",
-    radarDescription: "Bringt wertvolle Reibung in Teams, die offene Kontroversen bisher gemieden haben."
+    tagline: "Steht für inhaltliche Aufrichtigkeit gepaart mit hoher Lösungsorientierung.",
+    primaryStrength: "Spricht ungelöste Widersprüche frühzeitig und sachlich an.",
+    blindspotCounterweight: "Bringt wertvolle Perspektiven in den Austausch und stärkt die offene Gesprächskultur.",
+    focusArea: "Offene Kommunikation & Reflexion",
+    potentialImpulse: "Fördert frühzeitige Problemklärung",
+    radarDescription: "Bietet einen Anstoß für Teams, die ihren inhaltlichen Austausch vertiefen möchten."
   }
 };
 
@@ -190,31 +190,31 @@ export const COMPARISON_DATA = [
   {
     criterion: "Erhebungsmethode",
     legacy: "Statische Selbstauskunft (Fragebögen, CV-Schlagworte). Anfällig für geschönte Antworten.",
-    ki_hiring: "Interaktive Situational Judgement Simulationen. Misst konkretes Verhalten in realistischen Dilemma-Szenarien.",
-    impact: "Objektive Verhaltensdaten"
+    ki_hiring: "Interaktive Praxisszenarien. Ermöglicht die Selbstreflexion in 3 typischen Berufsfall-Entscheidungen.",
+    impact: "Konkreter Gesprächseinstieg"
   },
   {
-    criterion: "Matching-Ansatz",
-    legacy: "Reiner Gleichheitsabgleich. Sucht nach Profilen, die dem bestehenden Team gleichen (Gefahr von Einseitigkeit).",
-    ki_hiring: "Komplementäre Ergänzung (Culture-Add). Identifiziert gezielt Fähigkeiten und Denkweisen, die dem Team fehlen.",
-    impact: "Ausgleich blinder Flecken"
+    criterion: "Ansatz zur Vorbereitung",
+    legacy: "Reines Abfragen vorgefertigter Lebenslauf-Stationen im Erstgespräch.",
+    ki_hiring: "Strukturierter Austausch über bevorzugte Handlungsoptionen im Alltag.",
+    impact: "Reflexion im Bewerbungsprozess"
   },
   {
-    criterion: "Zeitaufwand für Talente",
-    legacy: "25–40 Minuten ausfüllen von Fragebögen. Hohe Drop-off-Raten.",
-    ki_hiring: "Kompakte 3-Minuten-Interaktion mit sofortigem qualitativem Mehrwert für die Bewerber.",
-    impact: "< 4 % Abbruchquote"
+    criterion: "Zeitaufwand für die Demo",
+    legacy: "Aufwendige Fragebögen mit 20–40 Minuten Bearbeitungszeit.",
+    ki_hiring: "Kompakte 3 Szenarien mit sofort sichtbarer Übersicht für das Gespräch.",
+    impact: "Kurze Bearbeitungsdauer"
   },
   {
-    criterion: "Unternehmens-Audit",
-    legacy: "Subjektive Fragebögen der HR-Abteilung, die oft Wunschbilder statt Realität abbilden.",
-    ki_hiring: "Empirische Team-Triangulation: Echte Verhaltensmuster statt Marketing-Selbstdarstellung.",
-    impact: "Realistisches Team-Profil"
+    criterion: "Transparenz der Auswertung",
+    legacy: "Oft unklare Punktergebnisse ohne Erklärung der dahinterliegenden Kriterien.",
+    ki_hiring: "Regelbasierte Herleitung der Vektor-Punkte anhand der ausgewählten Handlungsoptionen.",
+    impact: "Nachvollziehbarer Demo-Check"
   },
   {
-    criterion: "Regulatorik & Ethik",
-    legacy: "Oft unklare Kriterien und schwer nachvollziehbare Punktevergaben.",
-    ki_hiring: "Vollständig nachvollziehbare Verhaltensprofile ohne Vorurteile, Diskriminierung oder undurchsichtige Algorithmen.",
-    impact: "100 % nachvollziehbar"
+    criterion: "Einsatz im Bewerbungsprozess",
+    legacy: "Oft als starre Filterhürde ohne gemeinsamen Dialog genutzt.",
+    ki_hiring: "Als kostenlose Demo und Impulsgeber für das Bewerbungsgespräch konzipiert.",
+    impact: "Kein starrer Eignungstest"
   }
 ];

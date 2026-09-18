@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black bg-amber-450 hover:bg-amber-400 text-slate-950 transition-all cursor-pointer shadow-xs hover:shadow-md hover:scale-[1.02] active:scale-95 border border-amber-500"
           >
             <span className="w-2 h-2 rounded-full bg-slate-950 animate-pulse"></span>
-            <span>{audience === 'candidates' ? 'Kurztest starten (90s)' : 'Praxistest starten (90s)'}</span>
+            <span>Praxistest ausprobieren</span>
             <ChevronRight className="w-3.5 h-3.5 text-slate-950" />
           </button>
         </div>
@@ -165,7 +165,7 @@ export const Header: React.FC<HeaderProps> = ({
               }}
               className="w-full py-3 rounded-xl bg-amber-450 hover:bg-amber-400 text-slate-950 text-xs font-black text-center shadow-sm"
             >
-              {audience === 'candidates' ? 'Kurztest starten (90s)' : 'Praxistest starten'}
+              Praxistest ausprobieren
             </button>
           </div>
         </div>

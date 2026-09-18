@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate, onHome 
               </span>
             </button>
             <p className="text-zinc-500 text-xs max-w-md">
-              Moderne Eignungs-Diagnostik und Team-Matching für anspruchsvolle Unternehmen und Talente.
+              Kostenlose Praxisszenarien-Demo zur Reflexion und Gesprächsvorbereitung.
             </p>
           </div>
 
@@ -81,16 +81,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate, onHome 
         {/* Legal Disclaimer */}
         <div className="border-t border-zinc-100 pt-6 text-[11px] text-zinc-400 leading-relaxed space-y-2">
           <p>
-            * Modellrechnungen und Kennzahlen basieren auf Situational-Judgement-Benchmarks und DACH-Arbeitsmarktdaten. 
-            Die tatsächlichen Werte hängen vom individuellen Anforderungsprofil und den Teamstrukturen ab.
+            * Modellrechnungen und Kennzahlen sind unverbindliche Beispielszenarien auf Basis deiner Eingaben und typischer Recruiting-Kostenfaktoren.
           </p>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pt-2 text-zinc-500">
             <div>
-              © {new Date().getFullYear()} KI-Hiring Technologies GmbH. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} Jens Kathe • KI-Hiring.de. Alle Rechte vorbehalten.
             </div>
             <div className="flex items-center gap-1.5 font-mono text-[10px] text-zinc-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              <span>Hosting in Frankfurt/Main • Keine CDN-Drittanbieter</span>
+              <span>Clientseitige Demo • Gehostet auf Vercel</span>
             </div>
           </div>
         </div>

@@ -31,10 +31,10 @@ const PROFILES: TeamProfile[] = [
       title: 'Der mutige Antreiber (Konstruktiver Challenger)',
       profile: 'Sagt ehrlich die Meinung + Handelt eigenständig',
       mechanism: 'Spricht den Elefanten im Raum freundlich, aber direkt an und sorgt dafür, dass endlich Nägel mit Köpfen gemacht werden.',
-      impact: 'Entscheidungen in 4 Tagen statt 3 Wochen'
+      impact: 'Kann frühzeitige Klärung unterstützen'
     },
     keyMetrics: {
-      decisionCycle: '4 Tage statt 3 Wochen',
+      decisionCycle: 'Zügige Klärung',
       conflictLatency: 'Sofortige Klärung',
       alignmentStability: 'Sehr hoch'
     }
@@ -49,12 +49,12 @@ const PROFILES: TeamProfile[] = [
       title: 'Der Fels in der Brandung (Systemischer Architekt)',
       profile: 'Behält den Überblick + Schafft Ruhe',
       mechanism: 'Baut klare, einfache Abläufe, die das Tempo erhalten, aber das Team vor sinnlosen Nachtschichten schützen.',
-      impact: '-48 % Fehler & Nacharbeiten'
+      impact: 'Mehr Ruhe & Klarheit'
     },
     keyMetrics: {
       decisionCycle: 'Schnell & strukturiert',
       conflictLatency: 'Gemeinsame Fehleranalyse',
-      alignmentStability: '65 % weniger Stress'
+      alignmentStability: 'Verlässliche Planung'
     }
   },
   {
@@ -67,7 +67,7 @@ const PROFILES: TeamProfile[] = [
       title: 'Der Pragmatische Macher (Innovations-Impulsgeber)',
       profile: 'Probierfreudig + Hands-on',
       mechanism: 'Baut einfach mal einen kleinen Prototyp und beweist den Kollegen vor Ort, dass Veränderung Spaß macht.',
-      impact: '3x schnellere Umsetzung neuer Ideen'
+      impact: 'Fördert praxisnahe Umsetzung'
     },
     keyMetrics: {
       decisionCycle: 'Einfach ausprobieren',
