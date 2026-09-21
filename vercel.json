@@ -28,5 +28,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ki-hiring.de"
+        }
+      ],
+      "destination": "https://www.ki-hiring.de/$1",
+      "permanent": true
+    }
   ]
 }
