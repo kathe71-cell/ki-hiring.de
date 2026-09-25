@@ -48,11 +48,6 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
-              <p className="font-bold text-slate-950">Umsatzsteuer-Status:</p>
-              <p>Kleinunternehmer nach § 19 UStG. Es wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
               <p className="font-bold text-slate-950">Inhaltlich Verantwortlicher gemäß § 18 Abs. 2 MStV:</p>
               <p>
                 Jens Kathe<br />
