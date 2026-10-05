@@ -43,7 +43,6 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
               <p className="font-bold text-slate-950">Kontakt:</p>
               <p>E-Mail: <a href="mailto:jens@kathe.org" className="text-amber-600 hover:underline font-medium">jens@kathe.org</a></p>
-              <p>Telefon: <a href="tel:+491786652623" className="text-slate-900 font-medium">+49 178 6652623</a></p>
               <p>Web: <a href="https://www.ki-hiring.de" className="text-slate-900 font-medium">https://www.ki-hiring.de</a></p>
             </div>
 
