@@ -10,6 +10,7 @@ import { MoatComparison } from './components/MoatComparison';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { LegalModal } from './components/LegalModal';
+import { ProjektuebernahmeModal } from './components/ProjektuebernahmeModal';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -17,6 +18,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 export const App: React.FC = () => {
   const [audience, setAudience] = useState<'employers' | 'candidates'>('employers');
   const [legalModalType, setLegalModalType] = useState<'impressum' | 'datenschutz' | null>(null);
+  const [showAcq, setShowAcq] = useState(false);
 
   // Map clean paths to section IDs or modals
   const pathToSection: Record<string, string> = {
@@ -32,17 +34,25 @@ export const App: React.FC = () => {
   const handleRoute = (path: string, shouldPush: boolean = true) => {
     // Check if legal modal
     if (path === '/impressum') {
+      setShowAcq(false);
       setLegalModalType('impressum');
       if (shouldPush) window.history.pushState(null, '', '/impressum');
       return;
     }
     if (path === '/datenschutz') {
+      setShowAcq(false);
       setLegalModalType('datenschutz');
       if (shouldPush) window.history.pushState(null, '', '/datenschutz');
       return;
     }
+    if (path === '/projektuebernahme') {
+      setShowAcq(true);
+      if (shouldPush) window.history.pushState(null, '', '/projektuebernahme');
+      return;
+    }
 
     setLegalModalType(null);
+    setShowAcq(false);
 
     if (path === '/' || path === '') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -153,6 +163,11 @@ export const App: React.FC = () => {
       {/* Legal Modal (Impressum / DSGVO) */}
       <LegalModal
         type={legalModalType}
+        onClose={() => navigateTo('/')}
+      />
+
+      <ProjektuebernahmeModal
+        isOpen={showAcq}
         onClose={() => navigateTo('/')}
       />
 

@@ -95,6 +95,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate, onHome 
         </div>
 
       </div>
-    </footer>
+    
+            <div className="mt-8 p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-sm text-zinc-300">
+              <span className="font-bold text-white block mb-1">Projektübernahme</span>
+              <p className="mb-2">Interesse an der Übernahme von ki-hiring.de inklusive Projekt?</p>
+              <a href="/projektuebernahme" className="text-zinc-400 hover:text-zinc-300 font-medium">
+                Mehr erfahren &rarr;
+              </a>
+            </div>
+
+</footer>
   );
 };
